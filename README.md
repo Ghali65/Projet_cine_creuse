@@ -1,0 +1,1 @@
+initilialisation du projet sur git hup with miky
