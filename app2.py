@@ -3,6 +3,8 @@ import pandas as pd
 from streamlit_image_select import image_select
 from streamlit_carousel import carousel
 
+
+
 # Lire les CSV pour les DataFrames
 df_search = pd.read_csv('reco.csv')
 df_final = pd.read_csv('df_final.csv')
@@ -12,7 +14,7 @@ df_final['production_companies_name'] = df_final['production_companies_name'].ap
 df_final['genres_x'] = df_final['genres_x'].apply(pd.eval)
 
 # Titre de l'application
-st.title('Barre de Recherche sur Streamlit')
+st.title('Bienvenue sur Cinécreusix')
 
 # Ajouter une option vide comme première option 
 options = [''] + df_search['title_y'].tolist()
@@ -30,15 +32,24 @@ def resultat_recherche(text):
         film_title = film_details['title_y'].iloc[0] 
         film_overview = film_details['résumé'].iloc[0]
         film_poster = film_details['url_poster_path'].iloc[0]
+        film_gender = film_details['genres_x'].iloc[0]
+        film_gender_str = ', '.join(film_gender)
+        film_directors = film_details['directors'].iloc[0]
+        film_directors_str = ', '.join(film_directors)
+        #print(len_max)
+        print(film_gender)
         # Afficher les résultats 
         col1, col2 = st.columns([2, 1]) 
         # Ajouter du contenu dans la première colonne 
         with col1: 
             st.write(f"**Titre du film :** {film_title}") 
             st.write(f"**Résumé :** {film_overview}")
+            st.write(f"**Genre :** {film_gender_str}")
+            st.write(f"**Réalisateur :** {film_directors_str}")
         # Ajouter du contenu dans la deuxième colonne 
         with col2: 
             st.image(film_poster)
+
 def click_button(title):
     print(title)
     print('TU ES RENTRE')
