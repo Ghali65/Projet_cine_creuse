@@ -1,9 +1,6 @@
 import streamlit as st
 import pandas as pd
-from streamlit_image_select import image_select
-from streamlit_carousel import carousel
 from streamlit_option_menu import option_menu
-from streamlit_tags import st_tags_sidebar
 from streamlit_tags import st_tags
 from itertools import chain
 
