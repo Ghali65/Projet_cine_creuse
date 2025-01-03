@@ -1,4 +1,7 @@
-streamlit==1.40.1
 pandas==2.2.3
-streamlit_authenticator==0.4.1
-streamlit_option_menu==0.4.0
+streamlit==1.40.1
+streamlit-authenticator==0.4.1
+streamlit-image-select==0.6.0
+streamlit-option-menu==0.4.0
+streamlit-tags==1.2.8
+streamlit_carousel==1.1.2
