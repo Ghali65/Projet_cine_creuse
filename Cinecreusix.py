@@ -3,12 +3,13 @@ import pandas as pd
 from streamlit_option_menu import option_menu
 from streamlit_tags import st_tags
 from itertools import chain
+import plotly.express as px
 
 def menu():
     with st.sidebar:
         val_menu = option_menu(menu_title=None, options=["Menu principal", "Recherche avancée", "Informations"], icons=['house', 'search','info'])
         if st.session_state["film_click"]:
-            st.session_state["selection"] = "Menu principal" 
+            st.session_state["selection"] = "Menu principal"
             st.session_state["film_click"] = False
             
         else:
@@ -20,7 +21,10 @@ def list_unik(liste):
 @st.cache_data
 def create_df_final():
     df_final = pd.read_csv('df_final_title_stem.csv')
+    df_genre = pd.read_csv('df_genre.csv')
     df_search = pd.read_csv('reco_title_stem.csv')
+    df_count_by_continent = pd.read_csv('df_count_by_continent.csv')
+    df_bucket_10= pd.read_csv('df_bucket_10.csv')
     df_final['Titres_voisins'] = df_final['Titres_voisins'].apply(pd.eval)
     df_final['directors'] = df_final['directors'].apply(pd.eval)
     df_final['production_companies_name'] = df_final['production_companies_name'].apply(pd.eval)
@@ -30,11 +34,11 @@ def create_df_final():
     genre_x = list_unik(df_final['genres_x']) #créé une liste unique de tous les genres
     directors = list_unik(df_final['directors']) #créé une liste unique de tous les directors
     actors = list_unik(df_final['primaryName']) #créé une liste unique de tous les acteurs
-    return df_final, df_search, genre_x, directors, actors
+    return df_final, df_search, genre_x, directors, actors, df_genre, df_count_by_continent, df_bucket_10
 
     # Lire les CSV pour les DataFrames
     
-df_final, df_search, genre_x, directors, actors = create_df_final()
+df_final, df_search, genre_x, directors, actors, df_genre, df_count_by_continent, df_bucket_10 = create_df_final()
 
 # Ajouter une option vide comme première option 
 options = [''] + df_search['title_y'].tolist()
@@ -233,4 +237,51 @@ elif st.session_state["selection"] == "Recherche avancée":
                         st.button(title, on_click=click_button, args=[title])
 
  
+elif st.session_state["selection"] == "Informations":
+    st.write(f"Nombre de film présent dans le catalogque {df_final['genres_x'].count()}")
+    # Création du barplot avec plotly
+    graph_genre = px.bar(df_genre, x='genres_x', y='count', text='count', 
+                color='count', color_continuous_scale='Peach')
+
+    # Mise à jour des attributs de layout pour afficher les valeurs et améliorer la présentation
+    graph_genre.update_traces(texttemplate='%{text}', textposition='outside')
+    graph_genre.update_layout(title_text='Nombre de film par genre unique', 
+                    xaxis_title='Genres', 
+                    yaxis_title='Nombre de film', 
+                    xaxis_tickangle=-60,
+                    uniformtext_minsize=8, uniformtext_mode='hide',
+                    yaxis=dict(range=[0, 15000]))
     
+    st.plotly_chart(graph_genre)
+
+    # Création du barplot avec plotly
+    graph_cont_prod = px.bar(df_count_by_continent, x='Continent_final', y='count',text='count', 
+                color='count', color_continuous_scale='Peach')
+
+    # Mise à jour des attributs de layout pour afficher les valeurs et améliorer la présentation
+    graph_cont_prod.update_traces(texttemplate='%{text}', textposition='outside', textfont=dict(size=12, color='white'))
+    graph_cont_prod.update_layout(title_text='Nombre de film par continent vs France', 
+                    xaxis_title='Continent', 
+                    yaxis_title='Nombre de film', 
+                    xaxis_tickangle=-60,
+                    uniformtext_minsize=8, uniformtext_mode='hide',
+                    yaxis=dict(range=[0, 17000]))
+
+    # Affichage de la figure
+    st.plotly_chart(graph_cont_prod)
+
+    # Création du barplot avec plotly
+    graph_bucket = px.bar(df_bucket_10, x='bucket 10', y='count', text='count', color='count', color_continuous_scale='Peach')
+
+    # Mise à jour des attributs de layout pour afficher les valeurs et améliorer la présentation
+    graph_bucket.update_traces(texttemplate='%{text}', textposition='outside', textfont=dict(size=12, color='white'))
+    graph_bucket.update_layout(title_text='Nombre de film par décémie', 
+                    xaxis_title='Décémie', 
+                    yaxis_title='Nombre de film', 
+                    xaxis_tickangle=-60,
+                    uniformtext_minsize=8, uniformtext_mode='hide',
+                    yaxis=dict(range=[0, 7000]),
+                    xaxis=dict(tickvals=[1910, 1920, 1930, 1940, 1950, 1960, 1970, 1980, 1990, 2000, 2010, 2020]))
+
+    # Affichage de la figure
+    st.plotly_chart(graph_bucket)

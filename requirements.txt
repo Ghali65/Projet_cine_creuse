@@ -6,3 +6,4 @@ streamlit-option-menu==0.4.0
 streamlit-tags==1.2.8
 streamlit_carousel==1.1.2
 numpy==2.0.2
+plotly==5.24.1

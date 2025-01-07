@@ -1,0 +1,146 @@
+production_countries,count,Nom du pays,Continent
+US,13793,États-Unis,Amérique du Nord
+GB,3074,Royaume-Uni,Europe
+FR,2829,France,Europe
+DE,1447,Allemagne,Europe
+CA,1233,Canada,Amérique du Nord
+IT,1103,Italie,Europe
+JP,931,Japon,Asie
+ES,694,Espagne,Europe
+IN,620,Inde,Asie
+BE,460,Belgique,Europe
+HK,400,Hong Kong,Asie
+AU,393,Australie,Océanie
+CN,338,Chine,Asie
+SE,332,Suède,Europe
+KR,286,Corée du Sud,Asie
+DK,251,Dannemark,Europe
+IE,204,Irlande,Europe
+NL,204,Pays-Bas,Europe
+MX,192,Mexique,Amérique du Nord
+NO,175,Norvège,Europe
+RU,170,Russie,Europe
+TR,157,Turquie,Europe
+CH,154,Suisse,Europe
+PL,154,Pologne,Europe
+BR,129,Brésil,Amérique du Sud
+AR,117,Argentine,Amérique du Sud
+HU,109,Hongrie,Europe
+AT,108,Autriche,Europe
+FI,108,Finlande,Europe
+ZA,103,Afrique du Sud,Afrique
+RO,97,Roumanie,Europe
+SU,93,Union soviétique,Europe
+CZ,90,République tchèque,Europe
+NZ,81,Nouvelle-Zélande,Océanie
+LU,79,Luxembourg,Europe
+TW,78,Taiwan,Asie
+IR,72,Irak,Asie
+GR,72,Grèce,Europe
+IL,64,Israël,Asie
+TH,55,Thaïlande,Asie
+IS,52,Islande,Europe
+BG,48,Bulgarie,Europe
+PT,45,Portugal,Europe
+CL,40,Chili,Amérique du Sud
+AE,37,Émirats arabes unis,Asie
+RS,34,Serbie,Europe
+YU,34,Yougoslavie,Europe
+MA,31,Maroc,Afrique
+UA,31,Ukraine,Europe
+XC,29,République tchèque,Europe
+ID,27,Indonésie,Asie
+EG,25,Égypte,Afrique
+CO,24,Colombie,Amérique du Sud
+SG,19,Singapour,Asie
+QA,19,Qatar,Asie
+PH,19,Philippines,Asie
+EE,18,Estonie,Europe
+HR,17,Croatie,Europe
+PE,16,Pérou,Amérique du Sud
+UY,16,Uruguay,Amérique du Sud
+LB,15,Liban,Asie
+SI,15,Slovénie,Europe
+BA,14,Bosnie-Herzégovine,Europe
+PR,14,Porto Rico,Amérique du Nord
+TN,13,Tunisie,Afrique
+LT,13,Lituanie,Europe
+MK,12,Macédoine,Europe
+GE,12,Géorgie,Asie
+SK,12,Slovaquie,Europe
+MY,11,Malaisie,Asie
+CU,11,Cuba,Amérique du Nord
+VE,10,Venezuela,Amérique du Sud
+LV,10,Lettonie,Europe
+PS,10,Palestine,Asie
+MT,10,Malte,Europe
+JO,9,Jordanie,Asie
+DZ,9,Algérie,Afrique
+KZ,7,Kazakhstan,Asie
+KH,6,Cambodge,Asie
+LI,6,Liechtenstein,Europe
+SA,6,Arabie Saoudite,Asie
+VN,6,Vietnam,Asie
+SN,6,Sénégal,Afrique
+AF,5,Afghanistan,Asie
+BS,5,Bahamas,Amérique du Nord
+SY,4,Syrie,Asie
+PA,4,Panama,Amérique du Nord
+AL,4,Albanie,Europe
+IQ,4,Irak,Asie
+DO,4,République dominicaine,Amérique du Nord
+NA,4,Namibie,Afrique
+AW,4,Aruba,Amérique du Nord
+PY,4,Paraguay,Amérique du Sud
+CY,4,Chypre,Europe
+KE,4,Kenya,Afrique
+CS,3,Serbie-et-Monténégro,Europe
+PK,3,Pakistan,Asie
+BO,3,Bolivie,Amérique du Sud
+BY,3,Biélorussie,Europe
+BF,3,Burkina Faso,Afrique
+KW,3,Koweït,Asie
+GH,3,Ghana,Afrique
+JM,3,Jamaïque,Amérique du Nord
+BT,3,Bhoutan,Asie
+GT,3,Guatemala,Amérique du Nord
+XG,3,Amérique du Sud,Amérique du Sud
+BD,3,Bangladesh,Asie
+CM,3,Cameroun,Afrique
+MN,3,Mongolie,Asie
+AM,2,Arménie,Asie
+ZM,2,Zambie,Afrique
+LY,2,Libye,Afrique
+MC,2,Monaco,Europe
+CI,2,Côte d'Ivoire,Afrique
+NG,2,Nigéria,Afrique
+MO,2,Macau,Asie
+EC,2,Équateur,Amérique du Sud
+NP,2,Népal,Asie
+ZW,2,Zimbabwe,Afrique
+SB,2,Îles Salomon,Océanie
+BW,2,Botswana,Afrique
+RW,1,Rwanda,Afrique
+ET,1,Éthiopie,Afrique
+MW,1,Malawi,Afrique
+LK,1,Sri Lanka,Asie
+HT,1,Haïti,Amérique du Nord
+XK,1,Kosovo,Europe
+SD,1,Soudan,Afrique
+UG,1,Ouganda,Afrique
+VU,1,Vanuatu,Océanie
+ML,1,Mali,Afrique
+TL,1,Timor oriental,Asie
+NC,1,Nouvelle-Calédonie,Océanie
+PM,1,Saint-Pierre-et-Miquelon,Amérique du Nord
+ME,1,Monténégro,Europe
+LR,1,Libéria,Afrique
+SZ,1,Eswatini,Afrique
+NI,1,Nicaragua,Amérique du Nord
+VA,1,Vatican,Europe
+MM,1,Myanmar,Asie
+GP,1,Guadeloupe,Amérique du Nord
+PF,1,Polynésie française,Océanie
+KG,1,Kyrgyzstan,Asie
+KY,1,Îles Caïmans,Amérique du Nord
+CR,1,Costa Rica,Amérique du Nord
